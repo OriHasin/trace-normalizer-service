@@ -1,6 +1,6 @@
 # Trace Normalizer Service
 
-The **Trace Normalizer Service** is a backend solution for normalizing trace data into a standardized format. Built with extensibility and performance in mind, it supports configurable data formats, making it adaptable to diverse data sources and integration needs.
+The **Trace Normalizer Service** is a backend solution for normalizing trace data into a standardized format. Built with extensibility and ease of maintaincence in mind, it supports configurable data formats, making it adaptable to diverse data sources and integration needs.
 
 ## Features
 
