@@ -34,11 +34,11 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
    pip install -r requirements.txt
    ```
 
-4. Start the service:
+4. Start running a simple test case inside main.py:
    ```bash
    python main.py
    ```
-   for running a simple test case inside main.py
+   
    
 
 ### Configuration
