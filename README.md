@@ -5,8 +5,10 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
 ## Features
 
 - **Configurable Data Formats**: Define supported APMs formats through **source models**, ensuring flexibility and adaptability - you also can modify the desired normaliztion format easily thorugh NormalizationModel! .
+  
 - **Factory Design Pattern**: The architecture enables seamless addition of new formats and processing logic.
-- **Streaming Platform Integration**: Easily integrate with streaming platforms by implementing client-side logic for data ingestion and delivery.
+  
+- **Streaming Platform Integration**: Easily integrate with streaming platforms (up to you) by implementing client-side logic for data ingestion and delivery.
 
 ## Getting Started
 
