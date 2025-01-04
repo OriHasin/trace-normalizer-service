@@ -51,4 +51,4 @@ To integrate the service with a streaming platform, implement a custom client to
 
 
 
-### Thank you Arad & Shani! 
+### Thank you Arad & Shani 😙 ! 
