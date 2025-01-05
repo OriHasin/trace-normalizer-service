@@ -6,7 +6,7 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
 
 - **Configurable Data Formats**: Define supported APMs formats through **source models**, ensuring flexibility and adaptability - you also can modify the desired normaliztion format easily thorugh NormalizationModel! .
   
-- **Factory Design Pattern**: The architecture enables loosely coupled module & seamless addition of new formats and processing logic.
+- **Factory Design Pattern**: The architecture enables loosely coupled modules & seamless addition of new formats and processing logic.
 
 - **Route Extractor**: There is a build-in mechanism which estimates the route of a given URL (or path), you can support any estimations you wants based on RouteExtractor class.
 
