@@ -6,7 +6,11 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
 
 - **Configurable Data Formats**: Define supported APMs formats through **source models**, ensuring flexibility and adaptability - you also can modify the desired normaliztion format easily thorugh NormalizationModel! .
   
-- **Factory Design Pattern**: The architecture enables seamless addition of new formats and processing logic.
+- **Factory Design Pattern**: The architecture enables loosely coupled module & seamless addition of new formats and processing logic.
+
+- **Route Extractor**: There is a build-in mechanism which estimates the route of a given URL (or path), you can support any estimations you wants based on RouteExtractor class.
+
+- **Automation Test Harness**: Coming soon... , Will provide an automation engine based on .json inputs to easily run & test the system for any inputs you want.
   
 - **Streaming Platform Integration**: Easily integrate with streaming platforms (up to you) by implementing client-side logic for data ingestion and delivery.
 
@@ -38,7 +42,7 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
 
 4. Start running a simple test case inside main.py:
    ```bash
-   python main.py
+   python3 main.py
    ```
    
    
