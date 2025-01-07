@@ -10,7 +10,7 @@ The **Trace Normalizer Service** is a backend solution for normalizing trace dat
 
 - **Route Extractor**: There is a build-in mechanism which estimates the route of a given URL (or path), you can support any estimations you wants based on RouteExtractor class.
 
-- **Automation Test Harness**: Automation engine easily run & add test-cases represented by .yaml file! all you need to do is run pytest command.
+- **Automation Test Harness**: Automation engine easily run & add test-cases represented by .yaml files! all you need to do is run pytest command.
   
 - **Streaming Platform Integration**: Easily integrate with streaming platforms (up to you) by implementing client-side logic for data ingestion and delivery.
 
