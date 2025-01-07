@@ -15,7 +15,7 @@ class RouteExtractor:
     @staticmethod
     def extract_route(url: str) -> str:
 
-        route = url
+        route = None
         for pattern, placeholder in RouteExtractor.patterns:
             if re.search(pattern, url):                         # first, check if there is a pattern matching
                 route = re.sub(pattern, placeholder, url)     # if so, create a new string and break

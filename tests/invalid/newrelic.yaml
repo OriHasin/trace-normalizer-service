@@ -1,0 +1,13 @@
+- source: "newrelic"
+  input:
+    http.method: "GET"
+    http.scheme: null  # Missing scheme
+    tcp.port: 443
+  expected_error: "validation error"
+
+- source: "newrelic"
+  input:
+    http.method: null  # Missing required method
+    http.url: "https://example.net/resource"
+    tcp.port: 443
+  expected_error: "validation error"

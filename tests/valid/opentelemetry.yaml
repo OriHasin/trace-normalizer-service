@@ -1,0 +1,25 @@
+- source: "opentelemetry"
+  input:
+    tcp.host: "example.org"
+    tcp.port: 8080
+  expected:
+    method: null
+    url: null
+    path: null
+    route: null
+    scheme: null
+    domain: "example.org"
+    port: 8080
+
+- source: "opentelemetry"
+  input:
+    tcp.host: "service.internal"
+    tcp.port: 5000
+  expected:
+    method: null
+    url: null
+    path: null
+    route: null
+    scheme: null
+    domain: "service.internal"
+    port: 5000

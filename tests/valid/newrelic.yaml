@@ -1,0 +1,29 @@
+- source: "newrelic"
+  input:
+    http.method: "GET"
+    http.url: "https://example.net/resource"
+    http.scheme: "https"
+    tcp.port: 443
+  expected:
+    method: "GET"
+    url: "https://example.net/resource"
+    path: "/resource"
+    route: "/resource"
+    scheme: "https"
+    domain: "example.net"
+    port: 443
+
+- source: "newrelic"
+  input:
+    http.method: "PUT"
+    http.url: "http://api.example.com/data"
+    http.scheme: "http"
+    tcp.port: 80
+  expected:
+    method: "PUT"
+    url: "http://api.example.com/data"
+    path: "/data"
+    route: "/data"
+    scheme: "http"
+    domain: "api.example.com"
+    port: 80

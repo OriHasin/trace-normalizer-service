@@ -1,0 +1,11 @@
+- source: "opentelemetry"
+  input:
+    tcp.host: null  # Missing host
+    tcp.port: 8080
+  expected_error: "validation error"
+
+- source: "opentelemetry"
+  input:
+    tcp.host: "example.org"
+    tcp.port: "invalid_port"  # Port should be an integer
+  expected_error: "validation error"

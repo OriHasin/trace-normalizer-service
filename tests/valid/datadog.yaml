@@ -1,0 +1,30 @@
+- source: "datadog"
+  input:
+    http.method: "GET"
+    http.scheme: "https"
+    http.domain: "example.com"
+    http.path: "/api/resource"
+  expected:
+    method: "GET"
+    url: null
+    path: "/api/resource"
+    route: "/api/resource"
+    scheme: "https"
+    domain: "example.com"
+    port: 443
+
+- source: "datadog"
+  name: "Testing Route Extractor for DataDog"
+  input:
+    http.method: "POST"
+    http.scheme: "http"
+    http.domain: "test.com"
+    http.path: "/v1/test/123"
+  expected:
+    method: "POST"
+    url: null
+    path: "/v1/test/123"
+    route: "/v1/test/:id"
+    scheme: "http"
+    domain: "test.com"
+    port: 80

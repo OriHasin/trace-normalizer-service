@@ -1,0 +1,7 @@
+- source: "datadog"
+  input:
+    http.method: null
+    http.scheme: "https"
+    http.domain: "example.com"
+    http.path: "/api/resource"
+  expected_error: "validation error"

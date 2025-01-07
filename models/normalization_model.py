@@ -25,9 +25,11 @@ class NormalizedTrace(BaseModel):
         # enrich data based on url
         if model.url:
             parsed_url = urlparse(model.url)
-
+            print(parsed_url)
             if not model.route:  # Extract route dynamically based on URL
                 model.route = RouteExtractor.extract_route(model.url)
+                if not model.route:
+                    model.route = parsed_url.path
 
             if not model.path:
                 model.path = parsed_url.path
@@ -37,13 +39,23 @@ class NormalizedTrace(BaseModel):
 
             if not model.port:
                 model.port = parsed_url.port or (
-                    443 if parsed_url.scheme == 'https' else 80 if parsed_url.scheme == 'http' else None)
+                    443 if parsed_url.scheme == 'https' else 80 if parsed_url.scheme == 'http' else None) or (
+                    443 if model.scheme == 'https' else 80 if model.scheme == 'http' else None)
 
             if not model.domain:
                 model.domain = parsed_url.netloc
 
+            return model
 
-        elif model.path: # Extract route dynamically based on path if there is no URL
-            model.route = RouteExtractor.extract_route(model.path)
+        # enrich data, path-based
+        if model.path:
+
+            if not model.route: # Extract route dynamically based on path if there is no URL
+                model.route = RouteExtractor.extract_route(model.path)
+                if not model.route:
+                    model.route = model.path
+
+            if not model.port:
+                model.port = 443 if model.scheme == 'https' else 80 if model.scheme == 'http' else None
 
         return model
